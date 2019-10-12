@@ -1,36 +1,40 @@
-apply plugin: 'jacoco'
+ext {
+    minSDK = 16
+    targetSDK = 29
+    compileSDK = 29
 
-jacoco {
-    toolVersion = "$jacoco_version"
-}
+    kotlin_version = "1.3.50"
+    androidx_compat_version = "1.1.0"
+    androidx_core_version = "1.1.0"
+    androidx_constraintlayout_version = "1.1.3"
+    androidx_material_version = "1.1.0-beta01"
+    junit_version = "4.12"
+    androidx_junit_version = "1.1.1"
+    androidx_espresso_core_version = "3.2.0"
+    androidx_runner_test_version = "1.2.0"
+    androidx_rules_version = "1.2.0"
+    androidx_orchestrator_version = "1.2.0"
+
+    dependencies = [
+            kotlin          : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            appCompat       : "androidx.appcompat:appcompat:$androidx_compat_version",
+            core            : "androidx.core:core-ktx:$androidx_core_version",
+            materialDesign  : "com.google.android.material:material:$androidx_material_version",
+            constraintLayout: "androidx.constraintlayout:constraintlayout:$androidx_constraintlayout_version",
 
 
-tasks.withType(Test) {
-    jacoco.includeNoLocationClasses = true
-}
-
-task jacocoTestReport(type: JacocoReport, dependsOn: ['testDebugUnitTest', 'createDebugCoverageReport']) {
-
-    reports {
-        xml.enabled = true
-        html.enabled = true
-    }
-
-    def fileFilter = [
-            '**/R.class',
-            '**/R$*.class',
-            '**/BuildConfig.*',
-            '**/Manifest*.*',
-            '**/*Test*.*',
-            'android/**/*.*',
-            '**/*$[0-9].*'
     ]
-    def debugTree = fileTree(dir: "$project.buildDir/tmp/kotlin-classes/debug", excludes: fileFilter)
-    def mainSrc = "$project.projectDir/src/main/kotlin"
 
-    sourceDirectories.from = files([mainSrc])
-    classDirectories.from = files([debugTree])
-    executionData.from = fileTree(dir: project.buildDir, includes: [
-            'jacoco/testDebugUnitTest.exec', 'outputs/code_coverage/debugAndroidTest/connected/**/*.ec'
-    ])
+    testDependecies = [
+            extJunit    : "androidx.test.ext:junit:$androidx_junit_version",
+            junit       : "junit:junit:$junit_version",
+            runner      : "androidx.test:runner:$androidx_runner_test_version",
+            orchestrator: "androidx.test:orchestrator:$androidx_orchestrator_version",
+            rules       : "androidx.test:rules:$androidx_rules_version",
+            espresso    : "androidx.test.espresso:espresso-core:$androidx_espresso_core_version"
+
+
+    ]
+
+
 }
