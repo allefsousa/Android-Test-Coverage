@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.org/allefsousa/AndroidTestCoverage.svg?branch=master)](https://travis-ci.org/allefsousa/AndroidTestCoverage)
+[![Build Status](https://travis-ci.org/allefsousa/AndroidTestCoverage.svg?branch=master)](https://travis-ci.org/allefsousa/AndroidTestCoverage)    [![codecov](https://codecov.io/gh/allefsousa/AndroidTestCoverage/branch/master/graph/badge.svg)](https://codecov.io/gh/allefsousa/AndroidTestCoverage)
