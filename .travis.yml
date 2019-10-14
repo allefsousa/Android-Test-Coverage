@@ -32,7 +32,7 @@ android:
     - 'google-gdk-license-.+'
 
 before_install:
-  - cd TestCoverageKotlin
+  - cd TestCoverage
   - yes | sdkmanager "platforms;android-28"
 
 before_script:
