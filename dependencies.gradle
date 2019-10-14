@@ -22,7 +22,6 @@ ext {
             materialDesign  : "com.google.android.material:material:$androidx_material_version",
             constraintLayout: "androidx.constraintlayout:constraintlayout:$androidx_constraintlayout_version",
 
-
     ]
 
     testDependecies = [
