@@ -1,7 +1,6 @@
 
 buildscript {
     apply from: 'dependencies.gradle'
-
     ext.kotlin_version = '1.3.50'
     ext.jacoco_version = '0.8.2'
 
@@ -15,6 +14,14 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
+plugins {
+    id("io.gitlab.arturbosch.detekt").version("1.1.1")
+}
+detekt {
+    toolVersion = "1.1.1"
+    input = files("src/main/kotlin")
+    config = files("path/to/config.yml")
+}
 
 allprojects {
     apply from: "$rootDir/ktlint.gradle"
@@ -23,6 +30,7 @@ allprojects {
         jcenter()
         
     }
+
 }
 
 task clean(type: Delete) {

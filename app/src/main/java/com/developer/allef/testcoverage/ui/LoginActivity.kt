@@ -1,9 +1,10 @@
-package com.developer.allef.testcoverage
+package com.developer.allef.testcoverage.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.developer.allef.testcoverage.R
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
