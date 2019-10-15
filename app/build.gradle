@@ -53,11 +53,14 @@ dependencies {
     implementation dependencies.core
     implementation dependencies.materialDesign
     implementation dependencies.constraintLayout
+    implementation dependencies.koin
 
     testImplementation testDependencies.junit
+    testImplementation testDependencies.mockito
     androidTestImplementation testDependencies.extJunit
     androidTestImplementation testDependencies.runner
     androidTestImplementation testDependencies.rules
+    testImplementation testDependencies.mockk
     androidTestImplementation testDependencies.espresso
     androidTestUtil testDependencies.orchestrator
 
