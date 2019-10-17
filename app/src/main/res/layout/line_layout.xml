@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
     android:id="@+id/teste"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
 
     <View
         android:layout_width="wrap_content"
-        android:layout_weight="0.5"
-        android:background="#ffffff"
+        android:layout_height="1dp"
         android:layout_gravity="center"
-        android:layout_height="1dp" />
+        android:layout_weight="0.5"
+        android:background="#ffffff" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.8"
-        android:textColor="#ffffff"
         android:layout_gravity="center"
+        android:layout_weight="0.8"
         android:gravity="center"
-        android:text="ou"/>
+        android:text="ou"
+        android:textColor="#ffffff" />
+
     <View
         android:layout_width="wrap_content"
-        android:layout_weight="0.5"
-        android:background="#ffffff"
-        android:layout_gravity="center"
         android:layout_height="1dp"
-         />
+        android:layout_gravity="center"
+        android:layout_weight="0.5"
+        android:background="#ffffff" />
 
 </LinearLayout>
