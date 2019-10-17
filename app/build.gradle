@@ -34,7 +34,6 @@ android {
         }
     }
     testOptions {
-        execution 'ANDROIDX_TEST_ORCHESTRATOR'
         animationsDisabled true
 
         unitTests {
@@ -62,7 +61,7 @@ dependencies {
     androidTestImplementation testDependencies.rules
     testImplementation testDependencies.mockk
     androidTestImplementation testDependencies.espresso
-    androidTestUtil testDependencies.orchestrator
+    testImplementation 'org.koin:koin-test:2.0.1'
 
 
 }

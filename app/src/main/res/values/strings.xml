@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Android Coverage</string>
+    <string name="text_error_oauth">Usuario e senha Incorretos.</string>
+    <string name="text_success_oauth">Bem vindo.</string>
+    <string name="text_error_empty_password">Informe uma senha !</string>
+    <string name="text_error_empty_user">Informe seu usuario !</string>
 </resources>
