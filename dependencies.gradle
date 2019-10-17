@@ -34,7 +34,6 @@ ext {
             mockk           : "io.mockk:mockk:$mockk",
             mockito          : "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitokotlin",
             runner      : "androidx.test:runner:$androidx_runner_test_version",
-            orchestrator: "androidx.test:orchestrator:$androidx_orchestrator_version",
             rules       : "androidx.test:rules:$androidx_rules_version",
             espresso    : "androidx.test.espresso:espresso-core:$androidx_espresso_core_version"
 

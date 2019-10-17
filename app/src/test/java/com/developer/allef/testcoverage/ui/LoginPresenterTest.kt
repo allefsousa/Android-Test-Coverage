@@ -5,9 +5,4 @@ import org.junit.Assert.*
 /**
  * @author allef.santos on 2019-10-15
  */
-class LoginPresenterTest{
-
-
-
-
-}
+class LoginPresenterTest
