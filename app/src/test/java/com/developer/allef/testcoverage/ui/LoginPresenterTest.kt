@@ -1,5 +1,6 @@
 package com.developer.allef.testcoverage.ui
 
+import com.developer.allef.testcoverage.model.Login
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.verify
 import org.junit.Assert.*
@@ -54,6 +55,26 @@ class LoginPresenterTest{
         presenter.start()
         presenter.checkStateElementsView("test","test")
         verify(view).userSuccess()
+    }
+
+    @Test
+    fun checkStateElementsSuccessMethodTest(){
+        presenter = LoginPresenter()
+        presenter.view = view
+        presenter.start()
+        val login = Login("test","test")
+        presenter.validOauth(login)
+        verify(view).userSuccess()
+    }
+
+    @Test
+    fun checkStateElementsErroMethodTest(){
+        presenter = LoginPresenter()
+        presenter.view = view
+        presenter.start()
+        val login = Login("aa","aa")
+        presenter.validOauth(login)
+        verify(view).errorUserAndPassword()
     }
 
     @Test
