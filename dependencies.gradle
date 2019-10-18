@@ -17,6 +17,8 @@ ext {
     androidx_orchestrator_version = "1.2.0"
     mockk = "1.9.1"
     mockitokotlin = "2.2.0"
+    test_core = "1.2.0"
+
 
     dependencies = [
             kotlin          : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
@@ -26,16 +28,18 @@ ext {
             materialDesign  : "com.google.android.material:material:$androidx_material_version",
             constraintLayout: "androidx.constraintlayout:constraintlayout:$androidx_constraintlayout_version",
 
+
     ]
 
     testDependecies = [
-            extJunit    : "androidx.test.ext:junit:$androidx_junit_version",
-            junit       : "junit:junit:$junit_version",
-            mockk           : "io.mockk:mockk:$mockk",
-            mockito          : "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitokotlin",
-            runner      : "androidx.test:runner:$androidx_runner_test_version",
-            rules       : "androidx.test:rules:$androidx_rules_version",
-            espresso    : "androidx.test.espresso:espresso-core:$androidx_espresso_core_version"
+            extJunit: "androidx.test.ext:junit:$androidx_junit_version",
+            junit   : "junit:junit:$junit_version",
+            mockk   : "io.mockk:mockk:$mockk",
+            mockito : "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitokotlin",
+            runner  : "androidx.test:runner:$androidx_runner_test_version",
+            rules   : "androidx.test:rules:$androidx_rules_version",
+            espresso: "androidx.test.espresso:espresso-core:$androidx_espresso_core_version",
+            testCore: "androidx.test:core:$test_core"
 
 
     ]

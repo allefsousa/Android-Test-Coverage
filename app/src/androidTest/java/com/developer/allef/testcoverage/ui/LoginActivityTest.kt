@@ -1,6 +1,7 @@
 package com.developer.allef.testcoverage.ui
 
 import androidx.test.espresso.Espresso
+import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
 import androidx.test.rule.ActivityTestRule
@@ -14,7 +15,7 @@ import org.junit.runner.RunWith
  * @author allef.santos on 2019-10-15
  */
 @LargeTest
-@RunWith(AndroidJUnit4ClassRunner::class)
+@RunWith(AndroidJUnit4::class)
 class LoginActivityTest :  BaseTestRobot(){
 
     @get:Rule
