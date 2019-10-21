@@ -40,8 +40,6 @@ android {
             includeAndroidResources = true
         }
         unitTests.returnDefaultValues = true
-        execution 'ANDROIDX_TEST_ORCHESTRATOR'
-
     }
 }
 
@@ -65,7 +63,6 @@ dependencies {
     androidTestImplementation testDependencies.espresso
     androidTestImplementation testDependencies.testCore
     testImplementation 'org.koin:koin-test:2.0.1'
-    androidTestUtil 'androidx.test:orchestrator:1.1.0'
 
 
 }
