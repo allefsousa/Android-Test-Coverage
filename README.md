@@ -8,3 +8,17 @@ Your reports will be generate inside build folder: **app/build/reports/jacoco**
 ```bash
 ./gradlew clean jacocoTestReport
 ```
+Unit Test 
+
+```bash
+./gradlew test
+```
+
+Instrumented unit test
+
+```bash
+./gradlew connectedAndroidTest
+```
+
+
+
