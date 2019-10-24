@@ -14,10 +14,16 @@ Unit Test
 ./gradlew test
 ```
 
-Instrumented unit test
+Instrumented Unit Test
 
 ```bash
 ./gradlew connectedAndroidTest
+```
+
+Monkey Test
+
+```bash
+adb shell monkey -p <app_package> -v <event_count>
 ```
 
 
