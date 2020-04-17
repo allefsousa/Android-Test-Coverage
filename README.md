@@ -25,6 +25,7 @@ Monkey Test
 ```bash
 adb shell monkey -p <app_package> -v <event_count>
 ```
+![GkW5y6QUX4S3wrsckBdK8Pr4bcs1-qd23ysj](https://user-images.githubusercontent.com/7042627/79526500-cc770780-803b-11ea-872c-fc1b0e18067a.jpeg)
 
 
 
