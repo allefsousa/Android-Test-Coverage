@@ -1,3 +1,6 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=c0acfa8a4002a64f86f7bb16ce994e0e659c2ae198bce8c5d62104e617017d15
 language: android
 dist : trusty
 
@@ -47,6 +50,9 @@ before_script:
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter)
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
   - ./gradlew jacocoTestReport coveralls
 
 before_cache:
