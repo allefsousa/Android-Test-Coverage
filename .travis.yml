@@ -43,6 +43,8 @@ before_script:
   #script:
   #- ./gradlew lint
   - ./gradlew jacocoTestReport
+  - ./gradlew ktlint
+  - ./gradlew detekt
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
