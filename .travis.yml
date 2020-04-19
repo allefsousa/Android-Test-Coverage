@@ -43,8 +43,7 @@ before_script:
   #script:
   #- ./gradlew lint
   - ./gradlew jacocoTestReport
-  - ./gradlew ktlint
-  - ./gradlew detekt
+
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
@@ -54,6 +53,9 @@ before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 
+script:
+  - ./gradlew ktlint
+  - ./gradlew detekt
 cache:
   directories:
     - $HOME/.gradle/caches/
