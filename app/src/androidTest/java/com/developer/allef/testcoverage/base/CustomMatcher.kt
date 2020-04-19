@@ -6,7 +6,6 @@ import org.hamcrest.Description
 import org.hamcrest.Matcher
 import org.hamcrest.TypeSafeMatcher
 
-
 /**
  * @author allef.santos on 2019-10-17
  */
@@ -26,6 +25,6 @@ fun hasTextInputLayoutHintText(expectedErrorText: String): Matcher<View> {
             return expectedErrorText == hint
         }
 
-        override fun describeTo(description: Description) {}
+        override fun describeTo(description: Description) { /*error*/ }
     }
 }

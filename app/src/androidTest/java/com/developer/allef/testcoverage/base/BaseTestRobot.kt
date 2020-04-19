@@ -1,21 +1,21 @@
 package com.developer.allef.testcoverage.base
 
+import android.app.Activity
 import androidx.test.espresso.Espresso
+import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.ViewInteraction
 import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.assertion.ViewAssertions
+import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.matcher.RootMatchers.withDecorView
 import androidx.test.espresso.matcher.ViewMatchers
+import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
+import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.matcher.ViewMatchers.withText
 import junit.framework.AssertionFailedError
 import org.hamcrest.CoreMatchers
-import androidx.test.espresso.matcher.RootMatchers.withDecorView
-import android.R
-import android.app.Activity
-import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.matcher.ViewMatchers.*
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.CoreMatchers.not
-
 
 /**
  * @author allef.santos on 2019-10-15
@@ -27,13 +27,13 @@ open class BaseTestRobot {
     fun visibleElement(resId: Int): ViewInteraction = Espresso.onView(ViewMatchers.withId(resId)).check(
         ViewAssertions.matches((ViewMatchers.isDisplayed()))
     )
-    fun textInputHintError(resId: Int,activity: Activity,resIdValue: Int) =  onView(withId(resId)).check(matches(
+    fun textInputHintError(resId: Int, activity: Activity, resIdValue: Int) = onView(withId(resId)).check(matches(
         hasTextInputLayoutHintText(activity.getString(resIdValue))))
 
-    fun toastVisible (resId: Int,activity:Activity):ViewInteraction =
+    fun toastVisible(resId: Int, activity: Activity): ViewInteraction =
         onView(withText(resId)).inRoot(withDecorView(not(`is`(activity.window.decorView)))).check(
             matches(isDisplayed())
-        );
+        )
 
     fun notVisibibleElement(resId: Int): ViewInteraction = Espresso.onView(ViewMatchers.withId(resId)).check((ViewAssertions.matches(
         CoreMatchers.not(ViewMatchers.isDisplayed())
@@ -68,6 +68,4 @@ open class BaseTestRobot {
             false
         }
     }
-
-
 }

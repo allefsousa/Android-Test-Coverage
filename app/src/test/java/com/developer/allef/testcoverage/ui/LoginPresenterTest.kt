@@ -3,7 +3,6 @@ package com.developer.allef.testcoverage.ui
 import com.developer.allef.testcoverage.model.Login
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.verify
-import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.mockito.MockitoAnnotations
@@ -11,11 +10,10 @@ import org.mockito.MockitoAnnotations
 /**
  * @author allef.santos on 2019-10-15
  */
-class LoginPresenterTest{
+class LoginPresenterTest {
 
     private lateinit var presenter: LoginPresenter
     private var view: LoginContract.View = mock()
-
 
     @Before
     fun setup() {
@@ -23,66 +21,66 @@ class LoginPresenterTest{
     }
 
     @Test
-    fun checkStateElementsTest(){
+    fun checkStateElementsTest() {
         presenter = LoginPresenter()
         presenter.view = view
         presenter.start()
-        presenter.checkStateElementsView("","")
+        presenter.checkStateElementsView("", "")
         verify(view).userAndPasswordIsEmpty()
     }
 
     @Test
-    fun checkStateElementsPasswordIsEmptyTest(){
+    fun checkStateElementsPasswordIsEmptyTest() {
         presenter = LoginPresenter()
         presenter.view = view
         presenter.start()
-        presenter.checkStateElementsView("aa","")
+        presenter.checkStateElementsView("aa", "")
         verify(view).passwordIsEmpty()
     }
     @Test
-    fun checkStateElementsUserIsEmptyTest(){
+    fun checkStateElementsUserIsEmptyTest() {
         presenter = LoginPresenter()
         presenter.view = view
         presenter.start()
-        presenter.checkStateElementsView("","bb")
+        presenter.checkStateElementsView("", "bb")
         verify(view).userIsEmpty()
     }
 
     @Test
-    fun checkStateElementsSuccessTest(){
+    fun checkStateElementsSuccessTest() {
         presenter = LoginPresenter()
         presenter.view = view
         presenter.start()
-        presenter.checkStateElementsView("test","test")
+        presenter.checkStateElementsView("test", "test")
         verify(view).userSuccess()
     }
 
     @Test
-    fun checkStateElementsSuccessMethodTest(){
+    fun checkStateElementsSuccessMethodTest() {
         presenter = LoginPresenter()
         presenter.view = view
         presenter.start()
-        val login = Login("test","test")
+        val login = Login("test", "test")
         presenter.validOauth(login)
         verify(view).userSuccess()
     }
 
     @Test
-    fun checkStateElementsErroMethodTest(){
+    fun checkStateElementsErroMethodTest() {
         presenter = LoginPresenter()
         presenter.view = view
         presenter.start()
-        val login = Login("aa","aa")
+        val login = Login("aa", "aa")
         presenter.validOauth(login)
         verify(view).errorUserAndPassword()
     }
 
     @Test
-    fun checkStateElementsErrorPasswordIncorrectTest(){
+    fun checkStateElementsErrorPasswordIncorrectTest() {
         presenter = LoginPresenter()
         presenter.view = view
         presenter.start()
-        presenter.checkStateElementsView("user","123")
+        presenter.checkStateElementsView("user", "123")
         verify(view).errorUserAndPassword()
     }
 }

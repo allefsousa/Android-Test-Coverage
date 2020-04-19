@@ -23,8 +23,6 @@ class LoginRobot : BaseTestRobot() {
     fun inputPassword(value: String) = fillEditText(R.id.editPassword, value)
     fun inputUser(value: String) = fillEditText(R.id.editUser, value)
     fun loginButtonClick() = clickButton(R.id.btnOk)
-    fun assertUserPasswordError(value: Int,activity:Activity) = toastVisible(value,activity)
-    fun assertEditTextInpIsEmptyHintError(value: Int, activity:Activity, resIdValue:Int) = textInputHintError(value,activity,resIdValue)
-
-
+    fun assertUserPasswordError(value: Int, activity: Activity) = toastVisible(value, activity)
+    fun assertEditTextInpIsEmptyHintError(value: Int, activity: Activity, resIdValue: Int) = textInputHintError(value, activity, resIdValue)
 }

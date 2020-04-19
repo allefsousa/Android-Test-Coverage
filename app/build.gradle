@@ -7,6 +7,11 @@ apply plugin: 'kotlin-android-extensions'
 apply from: '../jacoco.gradle'
 
 
+apply from: '../ktlint.gradle'
+
+
+
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -18,6 +23,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -47,6 +53,7 @@ dependencies {
     def dependencies = rootProject.ext.dependencies
     def testDependencies = rootProject.ext.testDependecies
 
+
     implementation dependencies.kotlin
     implementation dependencies.appCompat
     implementation dependencies.core
@@ -64,5 +71,11 @@ dependencies {
     androidTestImplementation testDependencies.testCore
     testImplementation 'org.koin:koin-test:2.0.1'
 
-
 }
+
+
+
+
+
+
+
