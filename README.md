@@ -26,6 +26,11 @@ Monkey Test
 ```bash
 adb shell monkey -p <app_package> -v <event_count>
 ```
+Code Formatting ktlint
+
+```bash
+./gradlew detekt-formatting
+```
 Code Quality ktlint
 
 ```bash
