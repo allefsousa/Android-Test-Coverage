@@ -20,4 +20,13 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
     - name: Unit tests
-      run: ./gradlew clean jacocoTestReport
+      run: ./gradlew test
+    - name: Formating ktlint
+      run: ./gradlew ktlintFormat
+    - name: Code Quality ktlint
+      run: ./gradlew ktlint
+    - name: Code Quality DeteKT
+      run: ./gradlew detekt
+
+
+
