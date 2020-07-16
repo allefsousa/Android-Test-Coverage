@@ -20,4 +20,4 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
     - name: Unit tests
-      run: bash ./gradlew clean jacocoTestReport
+      run: ./gradlew clean jacocoTestReport
