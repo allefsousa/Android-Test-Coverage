@@ -30,8 +30,9 @@ jobs:
     - name: run UI Tests
       uses: reactivecircus/android-emulator-runner@v2
       with:
-        api-level: 29
-        script: ./gradlew clean jacocoTestReport
+        api-level: 28
+        script: ./gradlew connectedCheck
+
 
 
 
