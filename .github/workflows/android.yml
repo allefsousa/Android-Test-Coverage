@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -27,13 +27,12 @@ jobs:
       run: ./gradlew ktlint
     - name: Code Quality DeteKT
       run: ./gradlew detekt
-    - name: run tests
+    - name: run UI Tests
       uses: reactivecircus/android-emulator-runner@v2
       with:
         api-level: 29
-        ndk: 21.0.6113669
-        cmake: 3.10.2.4988404
         script: ./gradlew clean jacocoTestReport
+
 
 
 
