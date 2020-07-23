@@ -2,7 +2,6 @@
 buildscript {
     apply from: 'dependencies.gradle'
     apply from: 'detekt.gradle'
-    apply from: 'githooks.gradle'
 
     ext.kotlin_version = '1.3.61'
     ext.jacoco_version = '0.8.2'
@@ -35,10 +34,4 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
-afterEvaluate {
-    // We install the hook at the first occasion
-    tasks['clean'].dependsOn installGitHooks
-    tasks['clean'].dependsOn installGitHooks
 
-
-}
