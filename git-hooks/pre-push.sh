@@ -3,7 +3,7 @@
 echo "Running static analysis..."
 
 # Format code using KtLint, then run Detekt and KtLint static analysis
-./gradlew app:ktlintFormat app:detektCheck app:ktlint --daemon
+./gradlew app:ktlintFormat app:ktlint --daemon
 
 status=$?
 
