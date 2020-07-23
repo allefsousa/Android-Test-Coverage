@@ -35,3 +35,10 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+afterEvaluate {
+    // We install the hook at the first occasion
+    tasks['clean'].dependsOn installGitHooks
+    tasks['clean'].dependsOn installGitHooks
+
+
+}
