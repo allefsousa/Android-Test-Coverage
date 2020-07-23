@@ -24,4 +24,10 @@ task installGitHooks(type: Exec) {
     doLast {
         logger.info('Git hook installed successfully.')
     }
+
+}
+afterEvaluate {
+    // We install the hook at the first occasion
+    tasks['clean'].dependsOn installGitHooks
+    tasks['clean'].dependsOn installGitHooks
 }
