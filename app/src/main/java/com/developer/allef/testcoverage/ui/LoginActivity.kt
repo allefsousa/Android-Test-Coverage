@@ -39,7 +39,5 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
 
     override fun userSuccess() {
         Toast.makeText(this, getString(R.string.text_success_oauth), Toast.LENGTH_LONG).show()
-
-
     }
 }
