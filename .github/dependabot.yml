@@ -4,10 +4,12 @@ updates:
   directory: "/"
   schedule:
     interval: daily
+  target-branch: "develop"
   open-pull-requests-limit: 20
 
 - package-ecosystem: gradle
   directory: "/app"
   schedule:
     interval: daily
+  target-branch: "develop"
   open-pull-requests-limit: 20
