@@ -3,7 +3,7 @@ buildscript {
     apply from: 'dependencies.gradle'
     apply from: 'detekt.gradle'
 
-    ext.kotlin_version = '1.3.61'
+    ext.kotlin_version = '1.5.21'
     ext.jacoco_version = '0.8.2'
 
     repositories {
