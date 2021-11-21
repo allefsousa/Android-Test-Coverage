@@ -3,13 +3,12 @@ buildscript {
     apply from: 'dependencies.gradle'
     apply from: 'detekt.gradle'
 
-    ext.kotlin_version = '1.3.61'
+    ext.kotlin_version = '1.5.31'
     ext.jacoco_version = '0.8.2'
 
     repositories {
+        mavenCentral()
         google()
-        jcenter()
-        
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.0.3'
@@ -24,8 +23,8 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenCentral()
         google()
-        jcenter()
     }
 
 }
