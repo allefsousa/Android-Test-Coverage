@@ -15,7 +15,7 @@ ext {
     androidx_runner_test_version = "1.2.0"
     androidx_rules_version = "1.2.0"
     androidx_orchestrator_version = "1.2.0"
-    mockk = "1.9.1"
+    mockk = "1.12.1"
     mockitokotlin = "2.2.0"
 
     dependencies = [
