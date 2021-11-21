@@ -61,7 +61,7 @@ dependencies {
     androidTestImplementation testDependencies.rules
     testImplementation testDependencies.mockk
     androidTestImplementation testDependencies.espresso
-    testImplementation 'org.koin:koin-test:2.0.1'
+    testImplementation 'org.koin:koin-test:2.2.2'
 
 
 }
