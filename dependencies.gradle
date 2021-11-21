@@ -18,6 +18,8 @@ ext {
     mockk = "1.9.1"
     mockitokotlin = "2.2.0"
     test_core = "1.2.0"
+    kotlin_reflect = "1.1.0"
+
 
 
     dependencies = [
@@ -27,6 +29,7 @@ ext {
             koin            : "org.koin:koin-android:$koin",
             materialDesign  : "com.google.android.material:material:$androidx_material_version",
             constraintLayout: "androidx.constraintlayout:constraintlayout:$androidx_constraintlayout_version",
+            kotlinReflect: "org.jetbrains.kotlin:kotlin-reflect:$kotlin_reflect",
 
 
     ]
