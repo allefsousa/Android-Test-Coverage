@@ -62,7 +62,6 @@ dependencies {
     implementation dependencies.materialDesign
     implementation dependencies.constraintLayout
     implementation dependencies.koin
-    implementation dependencies.kotlinReflect
 
     testImplementation testDependencies.junit
     testImplementation testDependencies.mockito
