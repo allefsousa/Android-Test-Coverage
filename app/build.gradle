@@ -4,18 +4,15 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
-apply from: '../githooks.gradle'
-
 
 
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion "29.0.2"
+    compileSdkVersion 30
     defaultConfig {
         applicationId "com.developer.allef.testcoverage"
-        minSdkVersion 18
-        targetSdkVersion 31
+        minSdkVersion 21
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -60,16 +57,33 @@ dependencies {
 
     testImplementation testDependencies.junit
     testImplementation testDependencies.mockito
-    androidTestImplementation testDependencies.extJunit
-    androidTestImplementation testDependencies.runner
-    androidTestImplementation testDependencies.rules
     testImplementation testDependencies.mockk
-    androidTestImplementation testDependencies.espresso
-    androidTestImplementation testDependencies.testCore
     testImplementation 'io.insert-koin:koin-test:2.0.1'
     testImplementation 'org.powermock:powermock-core:1.7.4'
     testImplementation 'org.powermock:powermock-module-testng:1.7.4'
     testImplementation 'org.powermock:powermock-api-mockito2:1.7.4'
+
+    androidTestImplementation 'androidx.test:core:1.0.0'
+
+    // AndroidJUnitRunner and JUnit Rules
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test:rules:1.1.0'
+
+    // Assertions
+    androidTestImplementation 'androidx.test.ext:junit:1.0.0'
+    androidTestImplementation 'androidx.test.ext:truth:1.0.0'
+    androidTestImplementation 'com.google.truth:truth:0.42'
+
+    // Espresso dependencies
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-accessibility:3.3.0'
+
+    // The following Espresso dependency can be either "implementation"
+    // or "androidTestImplementation", depending on whether you want the
+    // dependency to appear on your APK's compile classpath or the test APK
+    // classpath.
 
 
 }
