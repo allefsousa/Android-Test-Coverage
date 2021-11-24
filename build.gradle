@@ -25,6 +25,7 @@ buildscript {
 subprojects {
     apply from: "../tools/detekt/detekt.gradle"
     apply from: "../tools/coverage/jacoco.gradle"
+    apply from: "../tools/ktlint/ktlint.gradle"
 }
 
 allprojects {
