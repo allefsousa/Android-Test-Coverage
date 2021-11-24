@@ -5,7 +5,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.developer.allef.testcoverage.R
 import kotlinx.android.synthetic.main.activity_main.*
-import org.koin.android.ext.android.inject
 
 class LoginActivity : AppCompatActivity(), LoginContract.View {
 

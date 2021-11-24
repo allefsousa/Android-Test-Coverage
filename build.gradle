@@ -1,25 +1,33 @@
 
 buildscript {
     apply from: 'dependencies.gradle'
-    apply from: 'detekt.gradle'
 
     ext.kotlin_version = '1.5.31'
     ext.jacoco_version = '0.8.2'
+    ext.ktlintPluginVersion = "10.2.0"
+
+    // https://github.com/detekt/detekt/releases
+    ext.detektVersion = "1.17.0"
 
     repositories {
         mavenCentral()
         google()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.0.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jlleitschuh.gradle:ktlint-gradle:$ktlintPluginVersion"
+        classpath "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$detektVersion"
 
     }
 }
 
-
-
-
+subprojects {
+    apply from: "../tools/detekt/detekt.gradle"
+}
 
 allprojects {
     repositories {
