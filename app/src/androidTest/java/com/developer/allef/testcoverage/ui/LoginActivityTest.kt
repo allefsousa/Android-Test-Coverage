@@ -23,7 +23,7 @@ class LoginActivityTest : BaseTestRobot() {
     @Test
     fun testVisibilityElementsUI() {
         login {
-        titleVisible()
+            titleVisible()
             textInputPasswordVisible()
             textInputUserVisible()
             editPasswordVisible()

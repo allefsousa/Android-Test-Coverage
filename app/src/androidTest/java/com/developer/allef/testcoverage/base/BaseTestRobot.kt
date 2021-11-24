@@ -27,22 +27,31 @@ open class BaseTestRobot {
     fun visibleElement(resId: Int): ViewInteraction = Espresso.onView(ViewMatchers.withId(resId)).check(
         ViewAssertions.matches((ViewMatchers.isDisplayed()))
     )
-    fun textInputHintError(resId: Int, activity: Activity, resIdValue: Int) = onView(withId(resId)).check(matches(
-        hasTextInputLayoutHintText(activity.getString(resIdValue))))
+    fun textInputHintError(resId: Int, activity: Activity, resIdValue: Int) = onView(withId(resId)).check(
+        matches(
+            hasTextInputLayoutHintText(activity.getString(resIdValue))
+        )
+    )
 
     fun toastVisible(resId: Int, activity: Activity): ViewInteraction =
         onView(withText(resId)).inRoot(withDecorView(not(`is`(activity.window.decorView)))).check(
             matches(isDisplayed())
         )
 
-    fun notVisibibleElement(resId: Int): ViewInteraction = Espresso.onView(ViewMatchers.withId(resId)).check((ViewAssertions.matches(
-        CoreMatchers.not(ViewMatchers.isDisplayed())
-    )))
+    fun notVisibibleElement(resId: Int): ViewInteraction = Espresso.onView(ViewMatchers.withId(resId)).check(
+        (
+            ViewAssertions.matches(
+                CoreMatchers.not(ViewMatchers.isDisplayed())
+            )
+            )
+    )
 
     fun clickButton(resId: Int): ViewInteraction = Espresso.onView((ViewMatchers.withId(resId))).perform(
-        ViewActions.click())
+        ViewActions.click()
+    )
     fun clickView(resId: Int): ViewInteraction = Espresso.onView((ViewMatchers.withId(resId))).perform(
-        ViewActions.click())
+        ViewActions.click()
+    )
 
     fun textView(resId: Int): ViewInteraction = Espresso.onView(ViewMatchers.withId(resId))
 
