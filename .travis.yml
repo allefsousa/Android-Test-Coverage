@@ -1,3 +1,6 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=c0acfa8a4002a64f86f7bb16ce994e0e659c2ae198bce8c5d62104e617017d15
 language: android
 dist : trusty
 
@@ -44,13 +47,18 @@ before_script:
   #- ./gradlew lint
   - ./gradlew jacocoTestReport
 
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+  - ./gradlew jacocoTestReport coveralls
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 
+script:
+  - ./gradlew ktlint
+  - ./gradlew detekt
 cache:
   directories:
     - $HOME/.gradle/caches/

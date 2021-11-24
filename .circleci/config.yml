@@ -1,0 +1,32 @@
+version: 2.1
+
+orbs:
+ android: circleci/android@0.2.0
+
+jobs:
+  build:
+    executor: android/android
+        
+    steps:
+      - checkout
+      - run:
+          name: Download Dependencies
+          command: ./gradlew androidDependencies
+      - run:
+          name: Run Tests ktlint
+          command: ./gradlew ktlint
+      - run:
+          name: Run Tests  detekt
+          command: ./gradlew detekt
+      - run:
+          name: Run Android Lint
+          command: ./gradlew lint test
+      - run:
+          name: Run Tests Jacaco Integrated test
+          command: ./gradlew jacocoTestReport
+      - store_artifacts: # for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
+          path: app/build/reports
+          destination: reports
+      - store_test_results: # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
+          path: app/build/test-results
+

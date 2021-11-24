@@ -7,9 +7,7 @@ import org.koin.dsl.module
  * @author allef.santos on 2019-10-15
  */
 
-val appModule = module{
+val appModule = module {
 
     factory { LoginPresenter() }
-
-
 }

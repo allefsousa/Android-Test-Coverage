@@ -5,11 +5,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.developer.allef.testcoverage.R
 import kotlinx.android.synthetic.main.activity_main.*
-import org.koin.android.ext.android.inject
 
 class LoginActivity : AppCompatActivity(), LoginContract.View {
-
-
 
     override val presenter: LoginPresenter by inject()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,12 +31,12 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
         userIsEmpty()
         passwordIsEmpty()
     }
-    override fun errorUserAndPassword() {
-        Toast.makeText(this,getString(R.string.text_error_oauth),Toast.LENGTH_LONG).show()
 
+    override fun errorUserAndPassword() {
+        Toast.makeText(this, getString(R.string.text_error_oauth), Toast.LENGTH_LONG).show()
     }
 
     override fun userSuccess() {
-        Toast.makeText(this,getString(R.string.text_success_oauth),Toast.LENGTH_LONG).show()
+        Toast.makeText(this, getString(R.string.text_success_oauth), Toast.LENGTH_LONG).show()
     }
 }

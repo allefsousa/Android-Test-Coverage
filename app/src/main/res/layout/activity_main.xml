@@ -8,100 +8,100 @@
     tools:context=".ui.LoginActivity">
 
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputUser"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputUser"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="Usuario"
+        android:textColorHint="#FFFFFF"
+        app:boxStrokeColor="#FFFFFF"
+        app:hintTextColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/textInputPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
-            android:hint="Usuario"
-            android:textColorHint="#FFFFFF"
-            app:boxStrokeColor="#FFFFFF"
-            app:hintTextColor="#FFFFFF"
-            app:layout_constraintBottom_toTopOf="@+id/textInputPassword"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView">
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editUser"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#FFFFFF" />
-        </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="Senha"
+        android:textColorHint="#FFFFFF"
+        app:boxStrokeColor="#FFFFFF"
+        app:hintTextColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/btnOk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputUser"
+        app:passwordToggleEnabled="true">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputPassword"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
-            android:hint="Senha"
-            android:textColorHint="#FFFFFF"
-            app:boxStrokeColor="#FFFFFF"
-            app:hintTextColor="#FFFFFF"
-            app:layout_constraintBottom_toTopOf="@+id/btnOk"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputUser"
-            app:passwordToggleEnabled="true">
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOk"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="24dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Entrar"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputPassword"
+        app:strokeColor="#FFFFFF" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnOk"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:textColor="#FFFFFF"
-            app:strokeColor="#FFFFFF"
-            android:textColorHint="#FFFFFF"
-            android:layout_marginTop="40dp"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:text="Entrar"
-            app:cornerRadius="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/line"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputPassword" />
+    <include
+        android:id="@+id/line"
+        layout="@layout/line_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnFacebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOk" />
 
-        <include
-            android:id="@+id/line"
-            layout="@layout/line_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnOk"
-            app:layout_constraintBottom_toTopOf="@+id/btnFacebook"/>
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:textColor="#FFFFFF"
-            android:text="Login"
-            android:textSize="24dp"
-            app:layout_constraintBottom_toTopOf="@+id/textInputUser"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputUser"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputUser"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <com.google.android.material.button.MaterialButton
@@ -109,10 +109,10 @@
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="match_parent"
         android:layout_height="54dp"
-        android:layout_marginTop="32dp"
-        android:insetTop="0dp"
         android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
         android:layout_marginRight="24dp"
+        android:insetTop="0dp"
         android:insetBottom="0dp"
         android:text="entrar com o google"
         android:textColor="#FFFFFF"
@@ -128,20 +128,20 @@
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="match_parent"
         android:layout_height="54dp"
+        android:layout_marginLeft="24dp"
         android:layout_marginTop="28dp"
+        android:layout_marginRight="24dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:text="Entrar com o facebook"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoogle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/line"
 
-        app:layout_constraintBottom_toTopOf="@+id/btnGoogle"
+        app:layout_constraintTop_toBottomOf="@+id/line"
         app:strokeColor="#FFFFFF" />
 
 

@@ -5,23 +5,26 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 apply from: '../jacoco.gradle'
+apply from: '../githooks.gradle'
+
 
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 31
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.developer.allef.testcoverage"
         minSdkVersion 18
-        targetSdkVersion 29
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
-        test.java.srcDirs += 'src/test/kotlin'
+        test.java.srcDirs += 'src/test/kotlin/ui'
         androidTest.java.srcDirs += 'src/androidTest/kotlin'
     }
     buildTypes {
@@ -47,6 +50,7 @@ dependencies {
     def dependencies = rootProject.ext.dependencies
     def testDependencies = rootProject.ext.testDependecies
 
+
     implementation dependencies.kotlin
     implementation dependencies.appCompat
     implementation dependencies.core
@@ -62,6 +66,17 @@ dependencies {
     testImplementation testDependencies.mockk
     androidTestImplementation testDependencies.espresso
     testImplementation 'org.koin:koin-test:2.2.2'
-
+    androidTestImplementation testDependencies.testCore
+    testImplementation 'org.koin:koin-test:2.0.1'
+    testImplementation 'org.powermock:powermock-core:1.7.4'
+    testImplementation 'org.powermock:powermock-module-testng:1.7.4'
+    testImplementation 'org.powermock:powermock-api-mockito2:1.7.4'
 
 }
+
+
+
+
+
+
+

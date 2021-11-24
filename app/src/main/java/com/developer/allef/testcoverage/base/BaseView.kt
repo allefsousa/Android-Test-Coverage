@@ -7,5 +7,4 @@ package com.developer.allef.testcoverage.base
 interface BaseView<out T : BasePresenter<*>> {
 
     val presenter: T
-
 }

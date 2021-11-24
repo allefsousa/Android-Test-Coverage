@@ -1,0 +1,40 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: set up JDK 11
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11
+    - name: Build with Gradle
+      run: ./gradlew build
+    - name: Unit tests
+      run: ./gradlew test
+    - name: Formating ktlint
+      run: ./gradlew ktlintFormat
+    - name: Code Quality ktlint
+      run: ./gradlew ktlint
+    - name: Code Quality DeteKT
+      run: ./gradlew detekt
+    - name: run UI Tests
+      uses: reactivecircus/android-emulator-runner@v2
+      with:
+        api-level: 28
+        script: ./gradlew connectedCheck
+
+
+
+
+
+
