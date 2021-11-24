@@ -26,7 +26,7 @@ ext {
             kotlin          : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
             appCompat       : "androidx.appcompat:appcompat:$androidx_compat_version",
             core            : "androidx.core:core-ktx:$androidx_core_version",
-            koin            : "org.koin:koin-android:$koin",
+            koin            : "io.insert-koin:koin-android:$koin",
             materialDesign  : "com.google.android.material:material:$androidx_material_version",
             constraintLayout: "androidx.constraintlayout:constraintlayout:$androidx_constraintlayout_version",
             kotlinReflect: "org.jetbrains.kotlin:kotlin-reflect:$kotlin_reflect",
