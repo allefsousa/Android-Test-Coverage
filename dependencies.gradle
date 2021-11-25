@@ -18,7 +18,7 @@ ext {
     mockk = "1.12.1"
     mockitokotlin = "2.2.0"
     test_core = "1.2.0"
-    kotlin_reflect = "1.1.0"
+    kotlin_reflect = "1.6.0"
 
 
 
