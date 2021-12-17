@@ -3,7 +3,7 @@
 ![Android CI](https://github.com/allefsousa/Android-Test-Coverage/workflows/Android%20CI/badge.svg?branch=master)
 [![Build Status](https://travis-ci.org/allefsousa/Android-Test-Coverage.svg?branch=master)](https://travis-ci.org/allefsousa/Android-Test-Coverage) [![CircleCI](https://circleci.com/gh/allefsousa/Android-Test-Coverage/tree/master.svg?style=svg)](https://circleci.com/gh/allefsousa/Android-Test-Coverage/tree/master) [![codecov](https://codecov.io/gh/allefsousa/Android-Test-Coverage/branch/master/graph/badge.svg?token=qSHrsOQWSj)](https://codecov.io/gh/allefsousa/Android-Test-Coverage)  [![ktlint](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg)](https://ktlint.github.io/)  [![BCH compliance](https://bettercodehub.com/edge/badge/allefsousa/Android-Test-Coverage?branch=master)](https://bettercodehub.com/) [![codebeat badge](https://codebeat.co/badges/0af8f2e2-77e6-44b7-9c2a-713b734c34b0)](https://codebeat.co/projects/github-com-allefsousa-android-test-coverage-master) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/licenses/MIT) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
-## How to runn
+## How to run
 
 Your reports will be generate inside build folder: **app/build/reports/jacoco**
 
