@@ -3,7 +3,7 @@ buildscript {
     apply from: 'dependencies.gradle'
     ext.kotlin_version = '1.5.31'
     ext.jacoco_version = '0.8.2'
-    ext.ktlintPluginVersion = "10.2.0"
+    ext.ktlintPluginVersion = "11.0.0"
 
     // https://github.com/detekt/detekt/releases
     ext.detektVersion = "1.17.0"
