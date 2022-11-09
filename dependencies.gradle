@@ -17,7 +17,7 @@ ext {
     androidx_orchestrator_version = "1.2.0"
     mockk = "1.12.1"
     mockitokotlin = "2.2.0"
-    test_core = "1.2.0"
+    test_core = "1.5.0"
     kotlin_reflect = "1.1.0"
 
 
