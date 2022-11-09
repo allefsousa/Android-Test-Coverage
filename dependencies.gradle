@@ -11,7 +11,7 @@ ext {
     junit_version = "4.12"
     koin = "2.0.1"
     androidx_junit_version = "1.1.1"
-    androidx_espresso_core_version = "3.2.0"
+    androidx_espresso_core_version = "3.5.0"
     androidx_runner_test_version = "1.2.0"
     androidx_rules_version = "1.2.0"
     androidx_orchestrator_version = "1.2.0"
