@@ -6,7 +6,7 @@ buildscript {
     ext.ktlintPluginVersion = "10.2.0"
 
     // https://github.com/detekt/detekt/releases
-    ext.detektVersion = "1.17.0"
+    ext.detektVersion = "1.22.0"
 
     repositories {
         mavenCentral()
